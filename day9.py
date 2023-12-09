@@ -34,7 +34,6 @@ def read_file_and_calculate_sum(file_path, calculation_function):
       lines = [convert_to_integers(line.strip().split()) for line in file]
       return sum(calculation_function(history) for history in lines)
 
-# Example usage
 file_path = "input.txt"
 sum_of_next_values = read_file_and_calculate_sum(file_path, extrapolate_next_value)
 sum_of_previous_values = read_file_and_calculate_sum(file_path, extrapolate_previous_value)
